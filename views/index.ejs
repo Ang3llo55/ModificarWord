@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Documentos Word (Node.js)</title>
+    <!-- Enlaza a tu archivo CSS si existe -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Generar Documento desde Plantilla</h1>
+    <p>Rellena los siguientes campos para personalizar la plantilla: <strong><%= defaultTemplate %></strong></p>
+    <!-- Asegúrate que los 'name' coincidan con las variables {{...}} en el .docx -->
+    <form action="/generate" method="POST">
+        <label for="nombre_cliente">Nombre del Cliente:</label><br>
+        <input type="text" id="nombre_cliente" name="nombre_cliente" required><br><br>
+
+        <label for="numero_pedido">Número de Pedido:</label><br>
+        <input type="text" id="numero_pedido" name="numero_pedido" required><br><br>
+
+        <label for="nombre_producto">Nombre del Producto:</label><br>
+        <input type="text" id="nombre_producto" name="nombre_producto" required><br><br>
+
+        <label for="direccion_envio">Dirección de Envío:</label><br>
+        <textarea id="direccion_envio" name="direccion_envio" rows="3" required></textarea><br><br>
+
+        <label for="tu_nombre">Tu Nombre (Firma):</label><br>
+        <input type="text" id="tu_nombre" name="tu_nombre" required><br><br>
+
+        <button type="submit">Generar y Descargar Documento</button>
+    </form>
+
+    <!-- Puedes añadir JS del lado del cliente aquí si lo necesitas -->
+    <!-- <script src="/js/script.js"></script> -->
+</body>
+</html>
