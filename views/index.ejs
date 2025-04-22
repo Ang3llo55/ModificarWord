@@ -3,31 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Documentos por Cédula</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <style>
-        .error-message {
-            color: red;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-    </style>
+    <title>Generador de Certificados Laborales</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- Hoja de estilos opcional -->
 </head>
 <body>
-    <h1>Generar Documento desde Plantilla</h1>
-    <p>Introduce la cédula para buscar los datos y generar el documento usando la plantilla: <strong><%= defaultTemplate %></strong></p>
+    <h1>Generar Certificado Laboral</h1>
+    <p>Introduce la cédula del empleado para generar el certificado correspondiente.</p>
 
-    <!-- Mensaje de error (si existe) -->
-    <% if (error) { %>
-        <p class="error-message"><%= error %></p>
-    <% } %>
-
+    <!-- Formulario simple que solo pide la cédula -->
+    <!-- Envía los datos por POST a la ruta /generate -->
     <form action="/generate" method="POST">
-        <label for="cedula">Cédula:</label><br>
-        <input type="text" id="cedula" name="cedula" required><br><br>
+        <label for="cedula">Cédula del Empleado:</label><br>
+        <input type="text" id="cedula" name="cedula" required autofocus><br><br> <!-- 'name="cedula"' es importante para que req.body.cedula funcione -->
 
-        <button type="submit">Buscar Datos y Generar Documento</button>
+        <button type="submit">Generar y Descargar Certificado</button>
     </form>
 
+    <!-- Script opcional para feedback visual (deshabilita botón mientras procesa) -->
+    <script>
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', () => {
+                const button = form.querySelector('button[type="submit"]');
+                if (button) {
+                    button.disabled = true;
+                    button.textContent = 'Generando...';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
