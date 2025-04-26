@@ -11,4 +11,4 @@ npm install @supabase/supabase-js
 Asegurarse de tener Node.js y npm instalados
 Iniciar servidor:
 Para desarrollo: npm run dev (si tienes nodemon)
-para producción/simple: npm install
+para producción/simple: npm start
