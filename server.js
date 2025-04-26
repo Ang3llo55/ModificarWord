@@ -189,11 +189,10 @@ app.post('/generate', async (req, res) => {
             fechaEspecifica: fechaEspecifica
         };
 
-        // 4. Pasa los datos del empleado a la plantilla
-        doc.setData(replacementsWithDate);
-        // 5. Realiza los reemplazos (renderiza el documento en memoria)
-        doc.render();
-        // 6. Obtiene el documento final como un buffer de Node.js
+        // Renderiza el documento pasando directamente los datos
+        doc.render(replacementsWithDate);
+
+        // Obtiene el documento final como un buffer de Node.js
         const outputBuffer = doc.getZip().generate({
             type: 'nodebuffer',
             compression: "DEFLATE", // Compresión estándar para .docx

@@ -1,7 +1,7 @@
 {
   "name": "modificarword",
   "version": "1.0.0",
-  "description": "",
+  "description": "Asegurarse de tener Node.js y npm instalados\r # Inicializa el proyecto en Node.js\r npm init -y\r # Instalar las dependencias\r npm install express ejs docxtemplater pizzip <br>\r npm install @supabase/supabase-js\r # Opcional, para desarrollo (reinicia el servidor automáticamente al guardar cambios)\r npm install --save-dev nodemon <br>\r # Iniciar servidor:\r Para desarrollo: npm run dev (si tienes nodemon) <br>\r para producción/simple: npm start",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -27,6 +27,6 @@
     "pizzip": "^3.1.8"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.10"
   }
 }
