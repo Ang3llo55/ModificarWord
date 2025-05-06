@@ -20,11 +20,13 @@
   },
   "homepage": "https://github.com/Ang3llo55/ModificarWord#readme",
   "dependencies": {
+    "@ilovepdf/ilovepdf-nodejs": "^0.3.0",
     "@supabase/supabase-js": "^2.49.4",
     "docxtemplater": "^3.61.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "pizzip": "^3.1.8"
+    "pizzip": "^3.1.8",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
