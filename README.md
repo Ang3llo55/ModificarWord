@@ -1,4 +1,6 @@
 # ModificarWord
+Es una pagina web que modifica archivos word insertandole palabras a parametros que estan en el documento
+# Antes de comenzar
 Asegurarse de tener Node.js y npm instalados
 # Inicializa el proyecto en Node.js
 npm init -y
